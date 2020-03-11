@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = "NYTbestseller CLI APP"
   spec.description   = "Use API data to get a list of bestselling audio books"
-  spec.homepage      = "git@github.com:Ricomitch/NYTbestseller.git"
+  spec.homepage      = "https://github.com/Ricomitch/NYTbestseller"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -20,8 +20,8 @@ Gem::Specification.new do |spec|
     spec.metadata["allowed_push_host"] = "http://mygemserver.com"
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "git@github.com:Ricomitch/NYTbestseller.git"
-    spec.metadata["changelog_uri"] = "git@github.com:Ricomitch/NYTbestseller.git"
+    spec.metadata["source_code_uri"] = "https://github.com/Ricomitch/NYTbestseller"
+    spec.metadata["changelog_uri"] = "https://github.com/Ricomitch/NYTbestseller"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
       "public gem pushes."

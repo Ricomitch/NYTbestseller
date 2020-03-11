@@ -1,4 +1,4 @@
-class NYTbestseller::class
+class NYTbestseller::CLI
   
   def start
     puts "Hello there!"
