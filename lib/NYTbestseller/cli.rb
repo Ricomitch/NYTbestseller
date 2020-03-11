@@ -9,7 +9,26 @@ class NYTbestseller::CLI
     puts "Hello there!"
     puts "getting data from API............. Please Wait"
     puts "creating new objs"
+    display_info
   end 
+  
+  def display_info
+    puts "please make a selection:"
+    input = gets.strip.downcase
+    
+    if input == "books"
+      puts "==================Best selling audio books=================="
+      puts "List of bestsellers"
+      display_info
+    elsif 
+      puts "Sorry wrong selection try again"
+      display_info
+    else 
+      quit
+    end 
+  end  
+      
+      
   
   #deal with inputs (loop to keep asking to make a new book selection)
   #display a list of books
@@ -21,6 +40,8 @@ class NYTbestseller::CLI
   #if input == "exit"
   #say goodbye and kill program
   
-   
+  def quit 
+    puts "goodbye"
+  end  
   
 end  
