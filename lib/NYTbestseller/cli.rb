@@ -6,27 +6,28 @@ class NYTbestseller::CLI
   #all inside start method 
   
   def start
-    puts "Hello there!"
-    puts "getting data from API............. Please Wait"
-    puts "creating new objs"
-    display_info
-  end 
-  
-  def display_info
-    puts "please make a selection:"
-    input = gets.strip.downcase
+    NYTbestseller::API.new.fetch_api
     
-    if input == "books"
-      puts "==================Best selling audio books=================="
-      puts "List of bestsellers"
-      display_info
-    elsif 
-      puts "Sorry wrong selection try again"
-      display_info
-    else 
-      quit
-    end 
-  end  
+    greeting
+    bestseller_list
+    menu
+  end
+  
+  
+  def greeting
+    puts "==================Greetings welcome to the New York times Bestsellers list!=================="
+  end
+  
+  
+  def bestseller_list
+    puts "==================Here's the current New York Times Audio Nonfiction Bestsellers:=================="
+  end
+  
+  def book_info
+  end
+  
+  
+   
       
       
   
@@ -41,7 +42,7 @@ class NYTbestseller::CLI
   #say goodbye and kill program
   
   def quit 
-    puts "goodbye"
+    puts "goodbye, until next time!"
   end  
   
 end  
