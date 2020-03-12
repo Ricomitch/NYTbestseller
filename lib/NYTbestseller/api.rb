@@ -13,7 +13,7 @@ class NYTbestseller::API
       description = book["description"]
       
     #NYTbestseller::Books.new(rank,title,author,publisher,description)
-    binding.pry  
+    
       
   end  
   end
