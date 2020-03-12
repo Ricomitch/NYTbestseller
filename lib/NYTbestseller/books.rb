@@ -1,1 +1,2 @@
-class CohortCLI::Books
+class NYTbestseller::Books
+end  
