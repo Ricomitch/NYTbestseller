@@ -1,5 +1,6 @@
 require "NYTbestseller/version"
 require "NYTbestseller/cli"
+require "NYTbestseller/api"
 
 # dependencies
 require "pry"
