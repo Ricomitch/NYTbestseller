@@ -7,10 +7,6 @@ class NYTbestseller::CLI
   
   def start
     NYTbestseller::API.new.fetch_api
-    
-    greeting
-    bestseller_list
-    menu
   end
   
   
