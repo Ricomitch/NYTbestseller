@@ -1,0 +1,1 @@
+class CohortCLI::Books

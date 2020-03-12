@@ -5,6 +5,7 @@ require "NYTbestseller/books"
 
 # dependencies
 require "pry"
+require "httparty"
 
 module NYTbestseller
   class Error < StandardError; end

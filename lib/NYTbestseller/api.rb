@@ -1,0 +1,2 @@
+class NYTbestseller::API 
+end  
