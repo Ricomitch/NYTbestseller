@@ -6,10 +6,16 @@ class NYTbestseller::CLI
   #all inside start method 
   
   def start
-    NYTbestseller::API.new.fetch_api
-    greeting
-    bestseller_list
-    menu
+    input = gets.strip.downcase
+    if(input != "quit")
+      @data = NYTbestseller::API.get_books(input)
+      @objects = NYTbestseller::Books.all 
+      greeting
+      bestseller_list
+      menu
+    else 
+      quit 
+    end 
   end
 
   def greeting
