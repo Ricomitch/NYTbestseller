@@ -13,12 +13,16 @@ class NYTbestseller::CLI
   end
 
   def greeting
-    puts "==================Greetings welcome to the New York times Bestsellers list!=================="
+    puts "===========Greetings welcome to the New York times Bestsellers list!==========="
   end
 
 
   def bestseller_list
-    puts "==================Here's the current New York Times Audio Nonfiction Bestsellers:=================="
+    puts "Here's the current New York Times Audio Nonfiction Bestsellers:"
+  
+    NYTbestseller::books.all.uniq.each.with_index(1) do |book, i|
+      puts "#{i}. #{book.title} by #{book.author}"
+    end
   end
 
   def book_info
