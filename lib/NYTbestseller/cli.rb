@@ -50,6 +50,17 @@ class NYTbestseller::CLI
       puts "Type 'list' to view the complete list again."
       puts "If you want to exit, type 'exit'.\n"
       input = gets.strip.downcase
+      
+      if input.to_i > 0 && input.to_i < NYTbestseller::Books.all.size
+        book_info(input)
+      elsif input == "list"
+        bestseller_list
+      elsif input == "exit"
+        quit
+      else 
+        puts "\nINVALID INPUT!!"
+      end
+    end  
   end
   
   def quit 
