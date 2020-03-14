@@ -1,18 +1,20 @@
 class NYTbestseller::Books
-  attr_accessor :rank, :title, :author, :publisher, :description
+  attr_accessor :rank, :title, :author, :publisher, :description, :link
   @@all = []
   
-  def initialize(hash)
-    hash.each {|key, value| self.send(("#{key}="), value)}
-    save
+  def initialize(rank,title,author,publisher,description,link)
+    @rank = rank
+    @title = title 
+    @author = author
+    @publisher = publisher
+    @description = description
+    @link = link
+  
+    @@all << self
   end
   
   def self.all
     @@all
   end 
-  
-  def save
-   @@all << self
-  end  
   
 end  

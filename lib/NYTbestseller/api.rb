@@ -11,8 +11,9 @@ class NYTbestseller::API
       author = book["author"]
       publisher = book["publisher"]
       description = book["description"]
+      link = book["link"]
       
-    #NYTbestseller::Books.new(rank,title,author,publisher,description)
+    NYTbestseller::Books.new(rank,title,author,publisher,description,link)
     
       
   end  
