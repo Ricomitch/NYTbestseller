@@ -6,16 +6,7 @@ class NYTbestseller::CLI
   #all inside start method 
   
   def start
-    input = gets.strip.downcase
-    if(input != "quit")
-      @data = NYTbestseller::API.get_books(input)
-      @objects = NYTbestseller::Books.all 
-      greeting
-      bestseller_list
-      menu
-    else 
-      quit 
-    end 
+    NYTbestseller::API.new.fetch_api
   end
 
   def greeting
@@ -32,6 +23,22 @@ class NYTbestseller::CLI
   end
 
   def book_info
+    book = NYTbestseller::Books.all[input.to_i - 1]
+        
+        puts "\n***********************************************"
+        
+        puts "\nRank:"
+        puts "#{book.rank}"
+        puts "\nTitle:"
+        puts "#{book.title}"
+        puts "\nAuthor:"
+        puts "#{book.author}"
+        puts "\nDescription:"
+        puts "#{book.description}"
+        puts "\nPublisher:"
+        puts "#{book.publisher}"
+        puts "\nLink to amazon:"
+        puts "#{book.link}\n"
   end
   
   def menu
