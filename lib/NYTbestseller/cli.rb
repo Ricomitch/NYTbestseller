@@ -42,6 +42,14 @@ class NYTbestseller::CLI
   end
   
   def menu
+    input = nil 
+    
+    while input !="exit"
+    puts "***********************************************"
+      puts "\nChoosing from the best sellers list input a number between 1-15 the best to view it's details."
+      puts "Type 'list' to view the complete list again."
+      puts "If you want to exit, type 'exit'.\n"
+      input = gets.strip.downcase
   end
   
   def quit 
