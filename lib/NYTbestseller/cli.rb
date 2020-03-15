@@ -52,13 +52,13 @@ class NYTbestseller::CLI
     while input !="exit"
     puts "***********************************************"
       puts "\nTo choose from the best sellers list above, input a number between 1-15 to view it's details."
-      puts "\nType 'list' to view the complete list again."
+      puts "\nType 'back' to view the complete list again."
       puts "\nIf you want to exit, type 'exit'.\n"
       input = gets.strip.downcase
       
       if input.to_i > 0 && input.to_i < NYTbestseller::Books.all.size
         book_info(input)
-      elsif input == "list"
+      elsif input == "back"
         bestseller_list
       elsif input == "exit"
         quit
