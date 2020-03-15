@@ -7,7 +7,7 @@ require "NYTbestseller/books"
 require "pry"
 require "httparty"
 
-module NYTbestseller
-  class Error < StandardError; end
+#module NYTbestseller
+ # class Error < StandardError; end
   # Your code goes here...
-end
+#end

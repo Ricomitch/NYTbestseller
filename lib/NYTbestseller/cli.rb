@@ -7,6 +7,10 @@ class NYTbestseller::CLI
   
   def start
     NYTbestseller::API.new.fetch_api
+    
+    greeting
+    bestseller_list
+    menu
   end
 
   def greeting
@@ -15,14 +19,14 @@ class NYTbestseller::CLI
 
 
   def bestseller_list
-    puts "Here's the current New York Times Audio Nonfiction Bestsellers:"
+    puts "\nHere's the current New York Times Audio Nonfiction Bestsellers" 
   
-    NYTbestseller::books.all.uniq.each.with_index(1) do |book, i|
+    NYTbestseller::Books.all.uniq.each.with_index(1) do |book, i|
       puts "#{i}. #{book.title} by #{book.author}"
     end
   end
 
-  def book_info
+  def book_info(input)
     book = NYTbestseller::Books.all[input.to_i - 1]
         
         puts "\n***********************************************"
@@ -37,8 +41,9 @@ class NYTbestseller::CLI
         puts "#{book.description}"
         puts "\nPublisher:"
         puts "#{book.publisher}"
-        puts "\nLink to amazon:"
-        puts "#{book.link}\n"
+        #puts "\nLink to amazon:"
+        #puts "#{book.link}\n"
+        
   end
   
   def menu
@@ -46,9 +51,9 @@ class NYTbestseller::CLI
     
     while input !="exit"
     puts "***********************************************"
-      puts "\nChoosing from the best sellers list input a number between 1-15 the best to view it's details."
-      puts "Type 'list' to view the complete list again."
-      puts "If you want to exit, type 'exit'.\n"
+      puts "\nTo choose from the best sellers list above, input a number between 1-15 to view it's details."
+      puts "\nType 'list' to view the complete list again."
+      puts "\nIf you want to exit, type 'exit'.\n"
       input = gets.strip.downcase
       
       if input.to_i > 0 && input.to_i < NYTbestseller::Books.all.size
@@ -58,13 +63,15 @@ class NYTbestseller::CLI
       elsif input == "exit"
         quit
       else 
-        puts "\nINVALID INPUT!!"
+        puts "\nINVALID INPUT!!!!"
       end
     end  
   end
   
   def quit 
     puts "goodbye, until next time!"
+    
+    binding.pry
   end
   
 end  

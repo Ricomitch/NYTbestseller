@@ -11,6 +11,7 @@ class NYTbestseller::Books
     @link = link
   
     @@all << self
+    
   end
   
   def self.all
