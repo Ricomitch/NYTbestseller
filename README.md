@@ -24,7 +24,7 @@ Type the following code below.
 
 ```./bin/NYTbestseller```
 
-You will be greeted and given a list of the Top 15 Audio Best Sellers.
+You will be greeted and given a list of the Top 15 Audio BestSellers.
 
 You are then prompted with a list of options to choose from:
 
