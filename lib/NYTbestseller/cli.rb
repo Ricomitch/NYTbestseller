@@ -71,7 +71,7 @@ class NYTbestseller::CLI
   def quit 
     puts "goodbye, until next time!"
     
-    binding.pry
+    #binding.pry
   end
   
 end  
