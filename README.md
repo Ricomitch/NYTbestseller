@@ -1,8 +1,6 @@
 # NYTbestseller
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/NYTbestseller`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Welcome to NYTbestseller! In this a Ruby Gem provides a CLI to view the current list of New York Times Audio Nonfiction BestSellers.
 
 ## Installation
 
@@ -24,7 +22,7 @@ Or install it yourself as:
 
 Type the following code below.
 
-./bin/NYTbestseller
+"./bin/NYTbestseller"
 
 You will be greeted and given a list of the Top 15 Audio Best Sellers.
 
