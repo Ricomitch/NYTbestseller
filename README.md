@@ -22,7 +22,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: ./bin/NYTbestseller
+Type the following code below.
+
+./bin/NYTbestseller
+
+You will be greeted and given a list of the Top 15 Audio Best Sellers.
+
+You are then prompted with a list of options to choose from:
+
+Pick a number from the list to find more info on a specific audiobook.
+See the full list of Best Sellers again.
+Exit the program.
+
+I hope this helps you find your next audiobook!
+
 
 ## Development
 
