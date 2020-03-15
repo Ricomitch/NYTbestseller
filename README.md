@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Type the following code below.
 
-"./bin/NYTbestseller"
+```./bin/NYTbestseller```
 
 You will be greeted and given a list of the Top 15 Audio Best Sellers.
 
