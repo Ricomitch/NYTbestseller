@@ -41,8 +41,6 @@ class NYTbestseller::CLI
         puts "#{book.description}"
         puts "\nPublisher:"
         puts "#{book.publisher}"
-        #puts "\nLink to amazon:"
-        #puts "#{book.link}\n"
         
   end
   
@@ -63,7 +61,7 @@ class NYTbestseller::CLI
       elsif input == "exit"
         quit
       else 
-        puts "\nINVALID INPUT!!!!"
+        puts "\nWRONG INPUT...PLEASE ENTER A NUMBER BETWEEN 1-15!!!!"
       end
     end  
   end

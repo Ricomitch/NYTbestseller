@@ -1,14 +1,13 @@
 class NYTbestseller::Books
-  attr_accessor :rank, :title, :author, :publisher, :description, :link
+  attr_accessor :rank, :title, :author, :publisher, :description
   @@all = []
   
-  def initialize(rank,title,author,publisher,description,link)
+  def initialize(rank,title,author,publisher,description)
     @rank = rank
     @title = title 
     @author = author
     @publisher = publisher
     @description = description
-    @link = link
   
     @@all << self
     
