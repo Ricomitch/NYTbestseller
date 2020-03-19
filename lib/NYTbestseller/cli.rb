@@ -1,9 +1,5 @@
 class NYTbestseller::CLI
   
-  #start should greet user, maybe give desc 
-  #get data from API 
-  #create new custom objs
-  #all inside start method 
   
   def start
     NYTbestseller::API.new.fetch_api
@@ -21,7 +17,7 @@ class NYTbestseller::CLI
   def bestseller_list
     puts "\nHere's the current New York Times Audio Nonfiction Bestsellers" 
   
-    NYTbestseller::Books.all.uniq.each.with_index(1) do |book, i|
+    NYTbestseller::Books.all.each.with_index(1) do |book, i|
       puts "#{i}. #{book.title} by #{book.author}"
     end
   end
